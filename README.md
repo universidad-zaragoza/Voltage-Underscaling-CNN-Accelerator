@@ -9,18 +9,16 @@ This project investigates how to **reduce the power consumption** of **CNN accel
 - ✔️ Implementation of **error mitigation** techniques to maintain accuracy.  
 - ✔️ Comparison of **energy consumption** before and after optimisation.
 
-- ## 📂 **Project Structure**.
-   
-📦 The structure of the project is as follows: 
+## 🚀 Estructura del Proyecto
 
- 1. `README.md`: The documentation file you are creating.
-2. **`requirements.txt`**: Specifies the libraries and dependencies needed for the project.
-3. 📁`models/`**: This folder would contain the pre-trained models you will use in the project.
-4. **`scripts/`**: This is where the code that runs the simulations and analysis will go.
-5. 📁`results/`**: Folder with the results obtained from the simulations or tests.
-6. 📁`notebooks/`**: It will contain the Jupyter notebooks for analysis and visualisation of results.
- 
+Aquí te presentamos una visión general de la organización de este repositorio. Cada directorio está diseñado para contener aspectos específicos del proyecto, facilitando la navegación y comprensión del trabajo realizado.
 
+* 📁 **`MoRS_análisis_modelos/`**: Este directorio está destinado a [**detallar mañana qué contiene, ej: resultados y análisis de los modelos MoRS, métricas de rendimiento y visualizaciones.**]
+* 🧠 **`Redes_Cifar_Colorectal_Imagenette/`**: Contiene el código y los recursos relacionados con el entrenamiento y evaluación de redes neuronales específicas para los datasets Cifar, Colorectal e Imagenette.
+* 💻 **`Redes_iniciales_Colorectal/`**: Directorio que aloja las implementaciones iniciales de redes neuronales aplicadas a datos de colorectal, incluyendo configuraciones y scripts de entrenamiento.
+* 📈 **`Resultados_Modelos_Mors/`**: Aquí se almacenan los resultados brutos y procesados generados por la ejecución de los modelos MoRS.
+* 🚫 **`.gitignore`**: Archivo de configuración de Git que especifica intencionalmente archivos y directorios sin seguimiento que Git debe ignorar.
+* 📄 **`LICENSE`**: Contiene la licencia bajo la cual se distribuye este proyecto, especificando los términos de uso y las condiciones de redistribución.
 
 ## 🚀 **Installation and Setup**.  
 To get started with this project, follow these steps:``
