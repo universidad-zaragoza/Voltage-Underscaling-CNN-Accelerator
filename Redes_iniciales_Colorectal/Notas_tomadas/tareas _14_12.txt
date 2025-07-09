@@ -1,0 +1,142 @@
+
+
+ok 1  graficar cuantos fallos hay en la s lo luego d ehacer flip +patch
+ok2 hacer un shif a la mascara despues de flip_patch ccolocando x alante 
+shif 1, 2, 3 y calcular acc para cada shift
+ok3 correr las capas d elas redes y para las activaciones (ouput) analizar las activaciones por valores ver graficas 
+analizar (flip_Patch antiguo)
+
+
+
+20/12
+salva del proyecto y versionarlo para trabajar con ramas
+1-Al escribir 
+pienso que debo procesar el tensor luego de hacerle el cast a int32
+2-valor del sigo y conservarlo
+ideas
+tf.where(tensor<0) es xq el signo es negativo creo un tensor de con -1 en esos indices
+tf.wherw (tensor>0) es xq es positivo creo un tensor de 1 en esos índices 
+esto se usa luego en el paso 4
+si no encuentro una operación que lo haga directamente puedo analizar esto
+https://stackoverflow.com/questions/54687497/how-to-unpack-an-integer-bit-pattern-into-a-tf-tensor
+guardar el primer elemento de cada valor
+https://tensorflow.rstudio.com/guides/tensorflow/tensor_slicing
+3-shift hacia la izquierda x 
+4-el signo guardado lo coloco en su posición original
+multiplico por el tensor de -1 y 1 creado en el paso 2 para colocar el signo
+5-aplicar mascara de fallo 
+6-guardo el tensor
+7-Al leer en la siguiente capa
+guardar el signo
+en la posición dle signo coloco un 0 
+shift hacia la derecha x posiciones
+recupero el signo 
+# para hacer esto creo un afuncion como addcustomlayer donde le paso x y me haga lo que debe hacer haciendo antes 
+lo que hace undervolting con la concersion d evalores del tensor
+guardo tensor
+
+
+
+LI = [0,3,7,11,13,17,21,23,27,31,35,37,41,45,49,51,55,59,63,66,70,74]
+# AI = [2,6,10,12,16,20,22,26,30,34,36,40,44,48,50,54,58,62,64,69,73,77]
+28/12
+Nuevo algoritmo 
+ok chequear que cdo hago el shift a la mascara , no se afecte el signo y que si hay error al final se mantenga el 
+fallo en esa dirección 
+luego en la inferencia si el shift es 1 multiplico el tensor por 1011111111111111, si es 2 1001111111111111, 
+para mantener el signo y desplazar el fallo x posiciones y luego aplico los errores
+Simular esto en jupyter y luego llevarlo a la función
+
+Aclaraciones para con Nicolás 
+verificar que las AddCustomLayers donde el aging va en false son las capas que escriben
+de ser así delante de estas capas x= a una función ya creada con un parametro pasado en true
+para saber si se desea aplicar esa técnica donde hago lo que dice el algoritmo a partor del paso 7
+
+
+tesis
+contar lo qu eestoy haciendo con MoRs
+Actualizar presentación de ciudad real con cosas nuevas para presentar en 16 de enero
+
+
+Documento tesis
+maching learning(concepto más técnico)
+las desventajas que tienen y suje el CNN
+tipos
+supervisado no sipersivaso y aaaa
+luego caer en el deep
+
+introduccion
+objetivos y cotribuciones
+Conceptualización 
+AI(Como va a evolucionar, todo lo qu eesto implica y bucar bibliografí confiable y gráficos )
+chatGPT cómo trabaja y consumo qu etiene 
+ML y DL(supervisado, no supervisado,refuerzo)
+NN(CNN) Tipos de capa y como es una convolución
+para caer en aceleradores decimos que neceistan muchos recuerso, mucho computo y por ello se usan los Aceleradores
+Aceleradores(academia e industria ): luego cuando se caiga en detalles se detallan las caracteristicas d etodos estos y demás: TPU, especificos ,eyeris
+Consumo: dyna
+Fiabilidad de forma general, cdo se baja el voltaje dejan de oprerar por ....PV(process variation(variaciones en el proceso de 
+fabricación )),(Cmos, como consecuencia de reducir la tensión: reducir consumo por ecuaciones)
+hablar breve de errores transitorios que s eproducen x bajar la tensión pero nos enfocaremos en los permanentes(voltage smooth)
+Memorias (SRam , consumo, de qué depende, corr dinámica  y de fuga y estática)
+capítulo 3
+nuestro acelerador
+
+
+
+
+
+
+10/01
+verificar diferencia absoluta  conlos experimentos FlipPatch_all_mask
+ y shift 1 
+
+creo la red sin fallos 
+y una red por cada experimento y comparo los outpust  abs
+absoluto : 1 numero x red
+probar con sofmax
+capa a capa
+envia excel de enrigia final
+
+
+ensor original y el tensor final para mbos experimentos
+calculos de la potencia
+
+12/01
+rectificar cuantas veces se afecta el bit 14
+tensor original qu ellega antes d ehacer el shif por capa y contabilizar total
+para ello hago un and con una mascara 0100000000000000
+sumar la cantodad de valores distintos de 0 
+
+Crear 10 mapas de fallos 
+correr los experimentos necesarios para todas estas máscaras
+estoy trabajando en el servidor con el net antes de hacer el shift 
+para ver si resnet corre bien 
+
+22/01
+El código anterior para las capas que escriben para analizar si no hay valores Nonne
+El experimento del del dia 10/01 hacerlo tambien solo para las capas de escriben
+además de calcular el ratio con el total de activaciones , explicación en el excel
+
+codigo una imagen debe recorrer todas las capas y calcular el total, y asi sucecibamente para todas las imagenes y luego al final sumar
+el for devolvera y array con elementos para 1 imagen para las capas implicadas y luego cdo mande la nueva capa limpio ese array 
+
+26/1
+calcular el total de acvs de las capas lambdas
+            total de activaciones que son LO
+.... Recuperar codigo qu eguarda las LO de a volteo, cuardar los locs de las LO
+            y de estas LO cuantas afectaron en la diferencia 
+	actv_Lo_affected= locs_LO[(locs_L0 < output.size)]
+	cantidad=len(actv_Lo_affected)
+ 	Calular la diferencia (queria escribir un valor y se escribió otro) este codigo ya funciona bien
+         ya lo tengo en el código
+
+valorar luego qqu e esto funcione hacerlo por capas 
+
+Analizar las VBW nuevas y correr experimento metricas de lect y escrituras
+
+
+
+
+
+

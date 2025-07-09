@@ -1,0 +1,40 @@
+
+
+Una vez que ya tengas anaconda en tu sesión del servidor puedes correr las siguientes lineas:
+
+1) actualizar conda
+conda update conda
+2) crear y activar el entorno con el nombre env_name (u otro a tu elección) y python=3.8
+conda create --name env_name python=3.8
+conda activate env_name
+3) instalar lo basico para la simulacion
+conda install -c anaconda cudatoolkit
+conda install -c conda-forge cudnn
+pip install tensorflow==2.5
+pip install tensorflow==2.11 con estaversión tuve que instalar 	
+conda install -c conda-forge keras
+conda
+pip install tensorflow_datasets
+conda install numba 
+4) agregar el entorno a jupyter
+conda install ipykernel
+ipython kernel install --name env_name --user
+5) instalar o actualizar el resto de paquetes usados (se puede trabajar sin ellos pero implicaria algunas pequeñas modificaciones al codigo)
+conda update numpy
+conda install matplotlib
+pip install opencv-python
+conda install pandas
+conda install seaborn
+
+Luego para conectarte de forma local puedes hacer un tunel ssh (Es la forma que he usado para correr los experimentos), o se puede hacer con jupyter
+
+
+1) en el servidor:
+jupyter notebook --no-browser --port=8887
+2) en tu maquina local (cmd):
+ssh -N -L localhost:8888:localhost:8887 nombre_de_usuario@socarrat.cps.unizar.es
+
+Los puertos son solo de ejemplo, luego puedes abrir en tu máquina local la dirección http://localhost:8888/tree y en caso de que te pida un token simplemente copias el que te muestra en el servidor (te saldrá un mensaje tipo The jupyter notebook is running at: http://localhost:8887/?token=abc en ese caso copias abc)
+
+Dentro de jupyter vas hacia la carpeta en la que trabajas (dentro del servidor) y abres el notebook de ejemplo, es importante que en el notebook vayas a la pestaña kernel y elijas el env_name que agregaste previamente.
+

@@ -1,0 +1,75 @@
+22/mayo
+calcular la cantidad de errores x tio caen por capas (LO,HO, L and H), para todas las redes .(hacerlo fuera de correr las redes )
+graficar
+otras redes 
+VGG19
+resnet
+NasNet
+mobilenet
+shuffle
+
+Probar las redes con otro dataset 
+
+ok activaciones x capas ResNet
+ok*Versión de la tesis 3 min(ver lo del tamaño d ela transparencia ):
+ Póster jornadas 
+ok*Softmax: hacer gráfico de caja y bigotes dond ese muestre
+
+okobtener los valores para cada imagen, serian 150 valores entres 0-2, lo mismo que hago ahora pero x cada imagen.
+ok En caso que lo de arriba no de muy adecuado:Con los 150 valores de diferencias , calcularlos al cuadrado- cada valor
+
+okMontar sentimental
+
+23/05
+***plan de estudio para este curso(adelantado solo falta subir plan d einvestigación curso de comunicación que etsoy pasando)
+
+okpendiente resouesta tutores-Lecturas y escrituras X capas
+okpara saber qué es lo qué corrige ECC(crer una máscara donde solo deje aquellas palabras que tienen mas de 1 error en la parte alta y correr baseline)
+okGráficar(ver foto)
+okDentro d elos errores PA, saber ctos son de 1 error y cuantos de varios (clasificado en 1 errores y varios), 
+okcount_bit_les 9103 coun_bit_more 336
+*Probar este experimento en Xception
+
+lunes 16 mayo 8:30-
+
+**Corre Xception a ver que pasa
+
+
+ok*por cada capa lambda obtener cpa y vooltaje al cual va peor que F+P
+todas las capas , en el caso que no afecte se guarda la capa y el voltaje 0.54
+11/05
+ok*Contar la cantidad de ciclo al llegar a una capa Lambda
+ok-comprobar que el número de ciclo coincide con lo que tenemos definido es decir el total_codigo linea 411 simulation
+
+
+
+29/05
+
+*Para los puntos intermedios d ela fig 9  
+*Hacer gráfica de figura 3activaciones con error PA,PB,PAB
+*Números en crudo de las cantidades para 
+*pensar e hacer barras apiladas
+
+
+correr para los demas puntos de fig 9
+comm== 0.1.2
+
+debugpy==1.5.1
+decorator==5.1.1
+dill== 0.3.6
+
+diagramas de acajas y bigotes entendiendolos
+Explicación muy buena
+https://www.estadisticaparatodos.es/taller/graficas/cajas.html
+https://app.aluracursos.com/forum/topico-parte-9-excluyendo-outliers-105874(interesante para agrupar por una cualidad detrminada)
+https://python-charts.com/es/distribucion/box-plot-matplotlib/
+
+Proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica.
+https://es.stackoverflow.com/questions/376762/como-mejorar-mi-gr%C3%A1fica-de-boxplot
+
+Adicionalmente, fruto del éxito de las propuestas de este trabajo, se esperan publicar los resultados tanto en foros nacionales como internacionales e incluso conseguir alguna patente internacional si resulta factible económicamente. 
+Acaces publicado(libro autores, actas , año , paginas)
+Pendiente: jornadas Sarteco, DSD. (Autores y demás datos)
+Trabajo futuro: La extensión que estamos haciendo
+
+

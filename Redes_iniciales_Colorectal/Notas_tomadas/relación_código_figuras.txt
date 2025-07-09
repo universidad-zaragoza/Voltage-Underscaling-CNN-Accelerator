@@ -1,0 +1,4 @@
+figura: Normalized accuracy for different types of faulty activations –Low-order (L),
+Low- & High-order (L&H), and High-order (H), varying the supply voltaje
+
+fichero: ACC_nets_base_VBW_Mors

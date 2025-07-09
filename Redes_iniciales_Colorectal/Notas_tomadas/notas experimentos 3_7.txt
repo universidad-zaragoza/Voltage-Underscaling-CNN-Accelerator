@@ -1,0 +1,155 @@
+Tareas en la noche
+
+correr los excel fichero 705 con el buffer_size bien 
+correr elotro expeimento de la diferencia netre un fallo y otro
+
+include_aging= False
+me dice en unas capas true y en otras false
+pongo aging_active en false y no salen valores null pero
+sigue el valor nan en loss
+
+dense net ocurre similara Alex net pero no tengo valores null en 
+las capas 24 y 25
+le puse 1 bit mas y sigue igual
+le puse 2 bit mas y va igual de mal
+le puse bitde menos y sigue igual le puse 1 
+poniendolo en 0 me da lo mismo, eso me sorprende , maña pruebo ponerlo en 
+0 el codigo origianl y correrlo a ver que pasa
+ mobileNet reduje los bit eb los pesos hasta colocar 0 y la perdida es Nan pero no  hay valores nulos (me sorprende
+que no hay variación como en Alexnet)
+mobilenet sale perdida en nan pero sin valores nulls
+le puse 5 bit y sale igual la perdida y sin nulls
+
+
+tareas
+6/07/22
+simular un mapa con errores intermedios entre 54 y 55
+voy a ejecutar el fichero  de vol 54 hasta optener 8664 ((13204-4124)/2)+4124) errores que es el numero intermedio para analizar el accurancy para esos errores 
+Aunque analizando bien para 10360 errores que hay en el buffer1 no hay problemas por tanto primero lo haré para un valor mayor que este 11782 (13204-10360)/2)+103204
+Para 11782 no hay cambios
+
+Deduzco que hay mas 0 que 1 por el codigo que hice.
+
+Probé simular el primer buffer con 1320  4 errore pero estos estan para una cantidad de elementos de 20104077 lo cual de pasa d elos 2 megas y la matriz  en 16 
+vectores no resulta.
+
+Entonces para el buffer 2 simulé 10360(teniendo en cuenta que para esta cantidad de errores en el buffer 1 todo esta bien) errores completé los elementos que faltaban con x y el resultado no varia, por lo cual estoy al deducir que no depende de la cantidad de errores sino de 
+la posición de los mismos o la distribución de estos dentro d elos vectores. sale mal igual
+
+visualmente en el buffer 2 veo que las primeras posiciones estan mas afectadas por los errores sobre todo la posición 0
+
+tome las posiciones del fichero siguiente [8388608:25165824] esto es inconcebible, seguir analizando
+ mismo resultado
+
+7/07/22
+Alexnet
+probé el buffer de pesos con 13204 errores el accuracy se muestra igual
+probé con 4124 es igual.
+Probé este código para el fichero de v 0.55 y sale normal, por eso se que no es problema del código.
+fui disminuyendo los errores hasta llevar a 1 y sigue con el problema , desde luego si coloco 0 el acurrancy sale el optimo porque solo envio un buffer de x
+
+Mobilenet
+probé con 1 error y el accurancy tb cae 
+
+
+
+probé para 13204 errores  pesos en 0 no hay problemas cuando inyecto errores en 0  como era de esperarse, pero cuando los 
+inyecto en 1 y en 0 y 1 a pesar que no salen valores nan(la comprobación fue para las capas 24 y 25) el acurracu cae el  minimo 0.11.....
+Para esta misma cantidad de errores aumente los pesos a 4 cuando inyecto errores en 0(acc 0.83) y en 0y 1 (acc 0.74) es decir
+desaparece el problema que tenia  para los pesos en 0 en este caso pero  inyectando (1 ) el acc cae al minimo valor.
+
+cantidad total del fichero 33751040
+la cantidad de palabras mal en el buffer de activaciones es 4738
+la cantidad de palabras mal en el buffer de pesos es 6265
+
+8/07
+
+probé quitar la cuantización no por capas sino general como me indicó Nicolas: los resultafos muestan los mismos problemas. 
+
+
+
+
+* Corri alexnet buffer 1 y algunos datos en los pesos me variaron analizar porque? ver el fichero  net lo referente a cuanticación y emvejecimiento
+correr otra redes a ver 
+dejar los anteriores  y de los nuevos quitar algunos 5888
+a ver que sucede
+
+
+1-Fichero completo: distancia en bits desde 1 fallo a otro, ya se que cdo encuentre el primero 8 bits mas tendre otro pero ver luego del segundo ctos bits hay
+analizar lo de los bloques.
+analizar el fichero completo.
+Analizar la cantidad de F o 1s seguidos en todo el fichero para saber los espacios libres que tengo
+hacer histograma para analizar cantidad de F seguidas  eje y(cantidad  de veces de f) eje x(cantidad de f)
+
+**analizar la posicion de los bloques mas grande inicio-fin del bloque
++++Colocar activaciones en o donde hay palabras con error: forzar que lo que se lea y procese e sun o
+colocar en o las capas mas grandes para probar (pruebo primero en la mas grande y luego pruebo en las mas pequeñas)
+Etudiar el tema del mapeado, o faulty map
+Buscar relacion entre tamaño de capa y sencsibiida a errores(inyectar o capa a acapa en las activaciones)
+bytes nulos escritos
+convolución si va a leer d eun bit fallido que se valla a 0
+Pensar en el código del otro buffer que debo implementar.
+
+dudas *******************************************************+
+2-rangos en los que se mueven las ativaciones: Hacer histograma para las activaciones  de la capa Relu, segun la cantidad de bit , eje x negativos y positivosCalcular los valores máximos y mínimos de las activaciones 
+eje y activaciones.
+
+ok analizar las capas mas sensibles: 
+analizar la precision por capas: obtener el valor del output para el acc por cada layer de net  haciendo un ciclo
+
+2.1analizar los valores que se repiten mas por capas y por redes cuando se almacenan luego d ela Quantización.
+Valorando no consumir más recursos.
+
+ok 3-estimar las activaciones que son más problemática a otras:  Contar la cantidad de o por capas
+ok capas con mas o que otras :- Contar la cantidad de salida en o por capas :leer el articulo donde dice que las ultimas capas son mas vulnerables 
+cantidad de activaciones nulas: 
+
+
+4- empezar a reorganizar la memoria para mejorar lo que ocurre con las activaciones
+analizar la cantidad de activaciones en ceros por capas y por redes 
+y estudiar ideas de que se puede hacer ?
+
+
+0k1- analizar los errores, en las posiciones del buffer por cada palabra de 16 bit: hacer un histograma de lo que ocurre de donde están los errores y cuales son
+viendo si hay mas errores en la parte más significativa dela plabra o en la menos significativa.
+cuantas veces hay errores distintos en una misma palabra.
+analizar los bloque con errores
+*activaciones en 0 y entre los valores qu emas se repiten y hacer el histograma tb para ello.
+
+tener anotado el maximo valor para cada escenarios en as posiciones
+ 
+
+Reordenar mi proyecto
+
+Creo Modulos
+con la libreria que son las mismas 
+cargar los pesos pasando el nombre de la red
+
+
+adrian.cristal@bsc.es
+
+
+porentaje d epalabras sin error
+
+2200 balerinas
+4000 balerinas
+200 cinto
+1800 tenis 
+8200 rosa
+
+4/08  Organizo el codigo qu eya tengo y dejo la información guardada en tablas y excels
+5/08 
+
+Gallagers irish tavern
+
+
+tareas 25/8
+ordenar las posiciones d emayor a menor
+https://get.adobe.com/es/reader/
+
+https://ayudica.unizar.es/otrs/public.pl?Action=PublicFAQZoom;ItemID=306;ZoomBackLink=QWN0aW9uPVB1YmxpY0ZBUUV4cGxvcmVyO0NhdGVnb3J5SUQ9MTE7U29ydEJ5PVRpdGxlO09yZGVy%0APVVwO1N0YXJ0SGl0PTE%3D%0A;
+
+
+https://www.sede.fnmt.gob.es/preguntas-frecuentes/otras-preguntas/-/asset_publisher/1RphW9IeUoAH/content/1677-como-puedo-firmar-un-documento-pdf-con-adobe-acrobat-reader-dc-?inheritRedirect=false
+
+

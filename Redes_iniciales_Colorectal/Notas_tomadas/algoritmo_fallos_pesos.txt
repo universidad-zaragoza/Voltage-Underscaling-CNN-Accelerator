@@ -1,0 +1,21 @@
+Algoritmo(crear una función que tome el modelo)
+le pido los pesos al modelo
+recorro las el modelo por capas
+si la capa tiene pesos y es convolución:
+    calculo la candidad de elementos que tiene la variable weights.size
+    lo guardo en un variable
+    la vectorizo a 1 dimensión y a concateno con el bias 
+    le paso ese itm a la función IntroduceFaultsInWeights
+    luego la separos y las coloco son el shape original 
+    y a model.layers[index] le establezco los pesos ya con fallos
+si la capa tiene pesos y es Normalizatión:
+    tiene los parametros gamma,beta,moving_mean,moving_std
+    hago lo mismo por cada elemento
+    (seria mejor hacer dos funciones nuevas para que hagan lo de vectorizar y luego separar de nuevo)
+    model.layers[index] le establezco los pesos ya con fallos
+Si es un capa Dense:
+    tiene weights y bias
+    hago los mismo 
+    model.layers[index] le establezco los pesos ya con fallos
+la función devuelve el modelo para qu econtinue el algoritmo    
+

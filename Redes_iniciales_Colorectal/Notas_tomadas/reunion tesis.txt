@@ -1,0 +1,79 @@
+intro analizar si hablo de las cpu y lo qu ese ha hecho para qu ecompute esto
+motivación
+mercado
+diagrama de la tesis del mercado y e peak
+luego la comica para pasar a lo prozimi
+quitar la introdu del índice
+pueod decir que hay otras capas pero que las mas importantes son esto: hacer una presentación de backup
+lors trabnsformers que se usan mucho , usan convolucinnes
+8 solo el acelerador, hacien ver qu elas redes entran almbuffer y como se mapea en el acelerador: animar el acelerador con el flujo de datos 
+diseños de aceletadores modernos  tpu y ires y decir qu eest esta inspirado en ellos: [19] Yunji Chen, Tao Luo, Shaoli Liu, et al. “DaDianNao: A Machine-Learning Supercom-
+puter”. In: Proceedings of the 47th Annual IEEE/ACM International Symposium on
+Microarchitecture. 2014, pp. 609–622 (cit. on pp. 22, 23).
+
+las formulas van a otra diapositiva 
+demostrar que esa memoria requieren de gran consumo: pagina 25 d ela tesis (memories consume between 27% [82] and 59% [30] of the total power of the
+accelerator.) buscar los artículos y ver como hacer un grafico animado que lo demuestre: oara ver la ultilidad  elos buffer
+luego caer en las formulas del artriculo pagina 25
+antes de la diapo 10: una diapo antes del proble processes variation buscar un grafico: se establece un voltaje conservador buscar artículos, hay que colocar el voltaj d la celda peor fabicada: articulo de osman: un grafico qu edemuestre como de mal o bien esten fabricada las celdas buscar articulo
+en la diapo 10, cuanto ahorramos de energía peo el accuracy va algarete: static power en la tesis esta(saber cómo lo calculé)
+Dispo de objetivo colocar una figura agradable que demuestre que dire los bjetivos, no hablar d elos específicos
+
+Estado arte: Pr cad articulo qu hablareé escojo la imagen mas representativa : centarme en el 4.1 y los demás piuntos buckup fig 12 de salami
+cuando hablo the thunerVolt detallarlo un poco más, en uan diapo para el ¡el sol , con la fig clave del equi y detalle d ecomo lo adaptamos en una figura
+los de las 4.2 al buckup con una figura también
+arquitecturas la tablas 3.1
+Marco experimentas: imagen del dataset  y hablar del dataset
+accelerador hardware:caracteristicas del acelerador y lo que est en la tesis : hemos hecho un simulador para redes neuronales  partir d etensorre
+MORS. hablar del mapa inicial y de lo qu ehic con MOrs: ver la tesis ver lo del revisor sobre tensorflow , hablar bien lo qu eyo hice en mors(como lo he adaptado)
+
+estudio de caracterización: Quantizacion: fig 5.1 , tabla 5.1
+
+Arreglar el circuito inicial colocando el reloj de área
+
+Publicaciones, colocarlas al final de las propuestas
+
+21/01/24
+la grafica arreglarla: comprobar la logarítmica, invertir las tensiones y qu empice en 0, hablar mas de la parte estadística
+
+revisor 2: modelo analítico que utiliza tensor Flow primero modela la red , cuantas veces accede a memoria, lectura y escritur , tiempo total en cilclo,
+hablar del PE array
+
+
+https://github.com/yamitok1384/Voltage-Underscaling-CNN-Accelerator
+
+
+y dese 0.59
+informante 
+
+conocimientos para la tesis: analizar los kilovatios de las gpu mas usadas para la IA, los HD son sensibles a latas temperaturas
+hablar del consumo en agua d ela IA
+refrigeración por aire(no están eficiente porque se consume más energía)
+refrigeración por inmersión es una de las que mas se usa(analizar si esto influye en el ahorro de energía, el índice de fallo es muy bajo, la eficiencia es 
+muy buena)
+para esto los equipos tienen que estar adaptados para ello(fluidos para la inmersión)
+infraestructura(se colocan en un sótano por lo general)
+refrigeración liquida directo al chip: es fácil de implementar en la CPU y GPU(como la que usan los equipos de gaming se extrae el calor con un liquido)
+HPC
+
+
+26: la reducion ebe ser controlada , debido a la figura
+a efectos d ecompararnos con stas propuestas yhinthervol y ezplicar:cada acelerador por cada capa es le ajuste, mu costoso y la lógica d ejauste d tensio por capa trae sobre coste
+38: tiopo d datos, tiempos de accesos ala memoria , cantidad de ciclos par acalcular y cumular
+y luego hablar del uso del modelo analítico, la revisión 
+la vdd fuera d ela abla; diferenciando los rangos y decir qu queremos ser mas gresivos y extrapolamos 
+hablar qu ele acelerador trabaja con coma fija de 16 bits, hablar d ela resiliencia d elos pesos las activaciones reuieren mas bts en la sparte enter qu los pesos por eso nos enfocamos en las activacione: punto fijo 1 bit de signo y el acelerador se ajust asegun cada cnn la represnetacion  ela coma
+
+
+77 diapos
+índice 10
+transiciones 14
+
+
+\subsection{July 2019 - December 2021: Professor (Associate Professor), Faculty of Economic Sciences),University of Camagüey Ignacio Agramonte, Camagüey, Cuba.
+
+\begin{itemize}
+    \item Teaching and developing educational materials.
+    \item Advising students on projects and academic work .
+      
+\end{itemize}
