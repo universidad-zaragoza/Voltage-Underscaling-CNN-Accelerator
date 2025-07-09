@@ -18,6 +18,14 @@ Here's an overview of how this repository is organized. Each directory is design
 * 💻 **`Redes_iniciales_Colorectal/`**: This directory houses the initial implementations of neural networks applied to colorectal data, including configurations and training scripts.
 * 📈 **`Resultados_Modelos_Mors/`**: Here, raw and processed results generated from the execution of MoRS models are stored.
 
+  ## 💾 Trained Network Weights
+
+Pre-trained weights for the networks used in this project are available on our Hugging Face repository:
+
+[**Access Trained Weights on Hugging Face**](https://huggingface.co/Milka13/Trained_Weights/tree/main)
+
+We recommend downloading the weights directly from this link to ensure model compatibility and performance.
+
 
 ## 🛠️ Getting Started
 
