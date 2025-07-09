@@ -9,16 +9,24 @@ This project investigates how to **reduce the power consumption** of **CNN accel
 - ✔️ Implementation of **error mitigation** techniques to maintain accuracy.  
 - ✔️ Comparison of **energy consumption** before and after optimisation.
 
-## 🚀 Estructura del Proyecto
+## 🚀 Project Structure
 
-Aquí te presentamos una visión general de la organización de este repositorio. Cada directorio está diseñado para contener aspectos específicos del proyecto, facilitando la navegación y comprensión del trabajo realizado.
+Here's an overview of how this repository is organized. Each directory is designed to contain specific aspects of the project, facilitating navigation and understanding of the work performed.
 
-* 📁 **`MoRS_análisis_modelos/`**: Este directorio está destinado a [**detallar mañana qué contiene, ej: resultados y análisis de los modelos MoRS, métricas de rendimiento y visualizaciones.**]
-* 🧠 **`Redes_Cifar_Colorectal_Imagenette/`**: Contiene el código y los recursos relacionados con el entrenamiento y evaluación de redes neuronales específicas para los datasets Cifar, Colorectal e Imagenette.
-* 💻 **`Redes_iniciales_Colorectal/`**: Directorio que aloja las implementaciones iniciales de redes neuronales aplicadas a datos de colorectal, incluyendo configuraciones y scripts de entrenamiento.
-* 📈 **`Resultados_Modelos_Mors/`**: Aquí se almacenan los resultados brutos y procesados generados por la ejecución de los modelos MoRS.
-* 🚫 **`.gitignore`**: Archivo de configuración de Git que especifica intencionalmente archivos y directorios sin seguimiento que Git debe ignorar.
-* 📄 **`LICENSE`**: Contiene la licencia bajo la cual se distribuye este proyecto, especificando los términos de uso y las condiciones de redistribución.
+* 📁 **`MoRS_análisis_modelos/`**: This directory is intended for [**to be detailed tomorrow: e.g., results and analysis of MoRS models, performance metrics, and visualizations.**]
+* 🧠 **`Redes_Cifar_Colorectal_Imagenette/`**: Contains the code and resources related to training and evaluating neural networks specifically for the Cifar, Colorectal, and Imagenette datasets.
+* 💻 **`Redes_iniciales_Colorectal/`**: This directory houses the initial implementations of neural networks applied to colorectal data, including configurations and training scripts.
+* 📈 **`Resultados_Modelos_Mors/`**: Here, raw and processed results generated from the execution of MoRS models are stored.
+* 🚫 **`.gitignore`**: A Git configuration file that intentionally specifies untracked files and directories that Git should ignore.
+* 📄 **`LICENSE`**: Contains the license under which this project is distributed, specifying terms of use and redistribution conditions.
+* 📖 **`README.md`**: This file, which you are currently reading, provides an overview of the project, its structure, and how to get started.
+
+---
+
+## 🛠️ Getting Started
+
+**Here you can add basic instructions on how to clone the repo, install dependencies (using a `requirements.txt` if you have one), and run the main scripts. 
+
 
 ## 🚀 **Installation and Setup**.  
 To get started with this project, follow these steps:``
@@ -33,3 +41,11 @@ cd Voltage-Underscaling-CNN-Accelerator-Project
 pip install -r requirements.txt
 
 ## 📜 **Related publications**  
+
+---
+
+## 📞 Contact
+
+For any questions or suggestions, please open an 'issue' in this repository or contact [yamilka@unizar.es].
+
+---
