@@ -5,7 +5,7 @@ This project investigates how to **reduce the power consumption** of **CNN accel
 
 ### 🔹 **Project characteristics**.  
 - ✔️ Simulation of the impact of **Voltage Underscaling** on different CNN architectures (AlexNet,Densenet,MobileNet,SqueezNet,VGG16, VGG19,ZFNet, ResNet, Inception, Xception).  
-- ✔️ Modelling of **permanent memory failures** and their impact on CNN inference.  
+- ✔️ Modelling of **permanent memory faults** and their impact on CNN inference.  
 - ✔️ Implementation of **error mitigation** techniques to maintain accuracy.  
 - ✔️ Comparison of **energy consumption** before and after optimisation.
 
