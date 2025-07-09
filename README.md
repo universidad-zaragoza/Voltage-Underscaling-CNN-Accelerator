@@ -13,15 +13,11 @@ This project investigates how to **reduce the power consumption** of **CNN accel
 
 Here's an overview of how this repository is organized. Each directory is designed to contain specific aspects of the project, facilitating navigation and understanding of the work performed.
 
-* 📁 **`MoRS_análisis_modelos/`**: This directory is intended for [**to be detailed tomorrow: e.g., results and analysis of MoRS models, performance metrics, and visualizations.**]
+* 📁 **`MoRS_análisis_modelos/`**: This directory is intended for [ results and analysis of MoRS models, performance metrics, and visualizations.]
 * 🧠 **`Redes_Cifar_Colorectal_Imagenette/`**: Contains the code and resources related to training and evaluating neural networks specifically for the Cifar, Colorectal, and Imagenette datasets.
 * 💻 **`Redes_iniciales_Colorectal/`**: This directory houses the initial implementations of neural networks applied to colorectal data, including configurations and training scripts.
 * 📈 **`Resultados_Modelos_Mors/`**: Here, raw and processed results generated from the execution of MoRS models are stored.
-* 🚫 **`.gitignore`**: A Git configuration file that intentionally specifies untracked files and directories that Git should ignore.
-* 📄 **`LICENSE`**: Contains the license under which this project is distributed, specifying terms of use and redistribution conditions.
-* 📖 **`README.md`**: This file, which you are currently reading, provides an overview of the project, its structure, and how to get started.
 
----
 
 ## 🛠️ Getting Started
 
