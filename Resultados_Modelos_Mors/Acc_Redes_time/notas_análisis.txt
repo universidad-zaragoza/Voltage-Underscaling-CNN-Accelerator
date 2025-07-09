@@ -1,0 +1,15 @@
+Me resulta muy curioso que redes como VGG16 y zqueznet en voltajes de 0.51 y 0.53 ,, mejoraen de scratchP de valores muy bajos porque las HO afectan
+mucho a pesar que las lHO estan corregidas, a Shit , la mejoría es notable.
+
+Por tanto para el voltaje 0.53 aplique F+P donde VGG16 tiene un acc de 0.21 y luego aplico shift y el acc mejora a 0.765333
+
+Hice los mismo para el voltaje 0.51 y el acc me da 0.1173 aplicando F+P + shift ,es decir las LHO fectan porqu eson muchas 
+
+Ahora cuando aplico scratchp+sift 0.51  el acc mejora notablememte a 0.800 las lHO estan corregidas y las Lo no afectan tanto
+
+
+Ahora para squeznet: 0.53 aplicando F+P y luego el shift va de 0.16 a 0.766667
+
+Hice los mismo para el voltaje 0.51 y el acc me da o.1226  aplicando F+P + shift  ,es decir las LHO fectan porqu eson muchas 
+
+Ahora cuando aplico scratchp+sift 0.51  el acc mejora notablememte a  0.9053  las lHO estan corregidas y las Lo no afectan tanto

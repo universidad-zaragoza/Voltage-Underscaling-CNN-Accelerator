@@ -1,0 +1,15 @@
+ 0.52                   %
+modelo 0: 267904   25.54     l&ho 24486  lo:129027  ho:114391
+modelo1:  268859   25.64     l&ho 24526  lo:129650  ho:114683 
+modelo2:  264339             l&ho 23382  lo:127886  ho:113071
+modelo3:  264186             l&ho 23498  lo:127848  ho:112884
+
+
+0.51  
+modelo 0: 741092   70%       l&ho 231360  lo:273898  ho:235834
+    
+
+
+
+
+de 4738 que eran en el original al quitar la paridar fueron 9436 peor la cantidad d efallos de mantuvieron

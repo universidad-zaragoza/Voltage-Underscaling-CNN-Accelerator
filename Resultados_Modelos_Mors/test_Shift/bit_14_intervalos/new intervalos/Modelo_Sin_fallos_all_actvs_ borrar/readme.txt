@@ -1,0 +1,1 @@
+En est eexperimento no se aplicó fallos calculo para todas las activaciones. 
